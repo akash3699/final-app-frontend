@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CategoryService {
-  url = 'http://192.168.44.71:4000/category'
+  url = 'http://200.0.1.155:4000/category'
 
   constructor(private http: HttpClient) { }
 
