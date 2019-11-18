@@ -7,13 +7,13 @@ npm install
 ng build --prod
 
 # remove the container if exists or running
-if [ $(docker container ls -q --filter name=my_app_frontend_container) != '' ]; then
+if [ $(docker container ls -a -q --filter name=my_app_frontend_container) != '' ]; then
     docker container stop my_app_frontend_container
     docker container rm my_app_frontend_container
 fi
 
 # remove the image if exists
-if [ $(docker image ls -q --filter reference=my_app_frontend) != '' ]; then
+if [ $(docker image ls -a -q --filter reference=my_app_frontend) != '' ]; then
     docker image rm my_app_frontend
 fi
 
